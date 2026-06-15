@@ -1,0 +1,705 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    background-color: #000000;
+    overflow-x: hidden;
+    background-image: url('../image/bgSAER2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #000000;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    border-bottom: 1px solid #c7ac71;
+    position: relative;
+}
+
+.logo {
+    color: #c7ac71;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    left: 50px;
+    position: absolute;
+}
+
+.logo img {
+    width: 70px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #c7ac71;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.main-content h1 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.tutoriais-sec {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 50px;
+    flex: 1;
+}
+
+/* Navegação das Abas */
+.tutoriais-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(199, 172, 113, 0.3);
+    padding-bottom: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tutorial-btn {
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: white;
+    padding: 15px 30px;
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tutorial-btn:hover {
+    background-color: rgba(199, 172, 113, 0.1);
+    color: #c7ac71;
+}
+
+.tutorial-btn.ativo {
+    background-color: rgba(199, 172, 113, 0.2);
+    color: #c7ac71;
+    border-color: #c7ac71;
+    border-bottom: 2px solid #000000;
+    margin-bottom: -12px;
+    z-index: 1;
+}
+
+.btn-icone {
+    font-size: 20px;
+}
+
+/* Painéis */
+.tutorial-painel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tutorial-painel.ativo {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== */
+/* ABA VÍDEO */
+/* ==================== */
+.video-pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.video-card-full {
+    border: 2px solid #c7ac71;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+    padding: 40px;
+    transition: 0.5s;
+    width: 100%;
+}
+
+.video-card-full:hover {
+    box-shadow: 0px 0px 15px 5px rgba(199, 172, 113, 0.3);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(199, 172, 113, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.video-info {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-left: 3px solid #c7ac71;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.video-info p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Dicas Extras */
+.dicas-extras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.dicas-card {
+    border: 2px solid #c7ac71;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+    padding: 25px;
+    transition: 0.5s;
+}
+
+.dicas-card:hover {
+    box-shadow: 0px 0px 15px 5px rgba(199, 172, 113, 0.3);
+    transform: translateY(-5px);
+}
+
+.dicas-card h3 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dicas-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dicas-card ul li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.dicas-card ul li:before {
+    content: "✓";
+    color: #c7ac71;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ==================== */
+/* ABA CONFIGURAÇÕES */
+/* ==================== */
+.config-pagina {
+    display: flex;
+    justify-content: center;
+}
+
+.config-card-full {
+    border: 2px solid #c7ac71;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+    padding: 40px;
+    transition: 0.5s;
+    width: 100%;
+    max-width: 800px;
+}
+
+.config-card-full:hover {
+    box-shadow: 0px 0px 15px 5px rgba(199, 172, 113, 0.3);
+}
+
+.tutorial-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tutorial-icone {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.tutorial-header h2 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.tutorial-desc {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.config-intro {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: rgba(199, 172, 113, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(199, 172, 113, 0.3);
+}
+
+.emoji-saer {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.config-intro p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.config-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.config-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(199, 172, 113, 0.2);
+    transition: 0.3s;
+}
+
+.config-item:hover {
+    border-color: #c7ac71;
+    background-color: rgba(199, 172, 113, 0.1);
+    transform: translateX(5px);
+}
+
+.tecla {
+    min-width: 160px;
+}
+
+.tecla kbd {
+    display: inline-block;
+    padding: 8px 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: #c7ac71;
+    background-color: #1a1a1a;
+    border: 2px solid #c7ac71;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 rgba(199, 172, 113, 0.3);
+    text-align: center;
+    width: 100%;
+}
+
+.tecla.mouse kbd {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    border-style: dashed;
+}
+
+.seta {
+    color: #c7ac71;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.acao {
+    font-family: 'Anton', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.acao-icone {
+    font-size: 12px;
+}
+
+.config-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(199, 172, 113, 0.1);
+    border-radius: 10px;
+    border: 1px solid #c7ac71;
+}
+
+.config-footer p {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.config-footer strong {
+    color: #ffffff;
+    background-color: rgba(199, 172, 113, 0.3);
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+/* ==================== */
+/* ABA PROTOCOLO */
+/* ==================== */
+.protocolo-container {
+    width: 100%;
+}
+
+.protocolo-header {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 2px solid #c7ac71;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+}
+
+.protocolo-header h2 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.protocolo-subtitulo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.protocolo-intro {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: rgba(199, 172, 113, 0.1);
+    border: 1px solid rgba(199, 172, 113, 0.3);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.protocolo-intro p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.protocolo-importancia {
+    margin-bottom: 40px;
+}
+
+.protocolo-importancia h3 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.importancia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.importancia-card {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid rgba(199, 172, 113, 0.2);
+    border-radius: 15px;
+    background-color: rgba(41, 41, 41, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+}
+
+.importancia-card:hover {
+    border-color: #c7ac71;
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(199, 172, 113, 0.2);
+}
+
+.importancia-icone {
+    font-size: 24px;
+    min-width: 30px;
+}
+
+.importancia-texto h4 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.importancia-texto p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.protocolo-imagens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.imagem-card {
+    border: 2px solid #c7ac71;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.imagem-card:hover {
+    box-shadow: 0px 0px 15px 5px rgba(199, 172, 113, 0.3);
+    transform: translateY(-5px);
+}
+
+.imagem-titulo {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.imagem-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.imagem-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.imagem-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+.protocolo-conclusao {
+    padding: 30px;
+    border: 2px solid #c7ac71;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+    text-align: center;
+}
+
+.protocolo-conclusao h3 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 28px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.protocolo-conclusao p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: transparent;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.redes a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #c7ac71;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .dicas-extras {
+        grid-template-columns: 1fr;
+    }
+    
+    .protocolo-imagens {
+        grid-template-columns: 1fr;
+    }
+    
+    .importancia-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .tutoriais-sec {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .tutorial-btn {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    
+    .video-card-full,
+    .config-card-full {
+        padding: 20px;
+    }
+    
+    .tutorial-header h2 {
+        font-size: 24px;
+    }
+    
+    .config-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .tecla {
+        min-width: 100%;
+    }
+    
+    .seta {
+        display: none;
+    }
+    
+    .protocolo-header h2 {
+        font-size: 24px;
+    }
+    
+    .protocolo-importancia h3 {
+        font-size: 22px;
+    }
+    
+    .main-content h1 {
+        font-size: 36px;
+    }
+}

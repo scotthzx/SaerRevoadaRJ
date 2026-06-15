@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    background-color: #000000;
+    overflow-x: hidden;
+    background-image: url('../image/bgSAER2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #000000;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    border-bottom: 1px solid #c7ac71;
+    position: relative;
+}
+
+.logo {
+    color: #c7ac71;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    left: 50px;
+    position: absolute;
+}
+
+.logo img {
+    width: 70px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #c7ac71;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.main-content h1 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.regras-sec {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 50px;
+    flex: 1;
+}
+
+.regras-container {
+    width: 100%;
+}
+
+/* Navegação das Regras */
+.regras-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(199, 172, 113, 0.3);
+    padding-bottom: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.regras-btn {
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: white;
+    padding: 15px 30px;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.regras-btn:hover {
+    background-color: rgba(199, 172, 113, 0.1);
+    color: #c7ac71;
+}
+
+.regras-btn.ativo {
+    background-color: rgba(199, 172, 113, 0.2);
+    color: #c7ac71;
+    border-color: #c7ac71;
+    border-bottom: 2px solid #000000;
+    margin-bottom: -12px;
+    z-index: 1;
+}
+
+.btn-icone {
+    font-size: 24px;
+}
+
+/* Painéis de Regras */
+.regras-painel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.regras-painel.ativo {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header das Regras */
+.regras-header-card {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 2px solid #c7ac71;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+}
+
+.regras-header-card h2 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.regras-header-card p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 16px;
+}
+
+.admin-header {
+    border-color: #c7ac71;
+    background-color: rgba(199, 172, 113, 0.1);
+}
+
+/* Grid de Artigos */
+.artigos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.artigo-card {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid rgba(199, 172, 113, 0.2);
+    border-radius: 15px;
+    background-color: rgba(41, 41, 41, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+    border-left: 5px solid #c7ac71;
+}
+
+.artigo-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0px 5px 15px rgba(199, 172, 113, 0.2);
+    border-color: #c7ac71;
+}
+
+.artigo-numero {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 20px;
+    min-width: 80px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(199, 172, 113, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artigo-conteudo {
+    flex: 1;
+}
+
+.artigo-conteudo p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Cores por tipo de artigo */
+.artigo-card.destaque {
+    border-left-color: #ffd700;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(41, 41, 41, 0.3));
+}
+
+.artigo-card.proibido {
+    border-left-color: #ff4444;
+    background: linear-gradient(90deg, rgba(255, 68, 68, 0.1), rgba(41, 41, 41, 0.3));
+}
+
+.artigo-card.obrigatorio {
+    border-left-color: #44ff44;
+    background: linear-gradient(90deg, rgba(68, 255, 68, 0.1), rgba(41, 41, 41, 0.3));
+}
+
+.artigo-card.prioridade {
+    border-left-color: #ff8800;
+    background: linear-gradient(90deg, rgba(255, 136, 0, 0.1), rgba(41, 41, 41, 0.3));
+}
+
+.artigo-card.elite {
+    border-left-color: #c7ac71;
+    background: linear-gradient(90deg, rgba(199, 172, 113, 0.2), rgba(41, 41, 41, 0.3));
+}
+
+.artigo-card.meta {
+    border-left-color: #00bfff;
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.1), rgba(41, 41, 41, 0.3));
+}
+
+.artigo-card.abordagem {
+    border-left-color: #ff69b4;
+    background: linear-gradient(90deg, rgba(255, 105, 180, 0.1), rgba(41, 41, 41, 0.3));
+}
+
+.artigo-card.admin-card {
+    border-left-color: #c7ac71;
+}
+
+/* Destaques no texto */
+.destaque-texto {
+    color: #c7ac71;
+    font-weight: bold;
+    background-color: rgba(199, 172, 113, 0.2);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.excecao {
+    color: #ffa500;
+    font-style: italic;
+}
+
+.horario {
+    color: #c7ac71;
+    font-weight: bold;
+}
+
+/* Mensagem de Rádio */
+.mensagem-radio {
+    margin-top: 15px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #c7ac71;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    position: relative;
+}
+
+.mensagem-radio:before {
+    content: "📻 Mensagem 190";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: #000000;
+    padding: 0 10px;
+    color: #c7ac71;
+    font-family: 'Anton', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.mensagem-radio p {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.variavel {
+    color: #ffa500;
+    font-weight: bold;
+    background-color: rgba(255, 165, 0, 0.2);
+    padding: 2px 6px;
+    border-radius: 3px;
+    border-bottom: 1px dashed #ffa500;
+}
+
+/* Footer */
+.rodape {
+    background-color: transparent;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.redes a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #c7ac71;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .regras-sec {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .regras-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .artigo-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .artigo-numero {
+        min-width: auto;
+        font-size: 16px;
+    }
+    
+    .regras-header-card h2 {
+        font-size: 24px;
+    }
+    
+    .mensagem-radio p {
+        font-size: 12px;
+    }
+    
+    .main-content h1 {
+        font-size: 36px;
+    }
+}

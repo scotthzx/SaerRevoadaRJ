@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAER - Funções</title>
+    <link rel="stylesheet" href="../style/funcoes.css">
+    <link rel="icon" type="image/x-icon" href="../image/SaerLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">
+            <img src="../image/SaerLogo.png" alt="Logo SAER" class="logo1">
+        </a>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="helicopteros.html">Helicópteros</a></li>
+                <li><a href="galeria.html">Fotos</a></li>
+                <li><a href="funcoes.html">Funções</a></li>
+                <li><a href="tutoriais.html">Tutoriais</a></li>
+                <li><a href="regras.html">Regras</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <div class="main-content">
+            <h1>Funções</h1>
+        </div>
+    </main>
+    
+    <section class="funcoes-sec">
+        <div class="abas-container">
+            <div class="abas-navegacao">
+                <button class="aba-btn ativo" onclick="abrirAba('piloto')">
+                    <span class="aba-icone">✈</span>
+                    Piloto SAER
+                </button>
+                <button class="aba-btn" onclick="abrirAba('atirador')">
+                    <span class="aba-icone">🎯</span>
+                    Atirador SAER
+                </button>
+                <button class="aba-btn" onclick="abrirAba('elite')">
+                    <span class="aba-icone">⭐</span>
+                    Elite SAER
+                </button>
+                <button class="aba-btn" onclick="abrirAba('administrador')">
+                    <span class="aba-icone">⚙</span>
+                    Administrador SAER
+                </button>
+                <button class="aba-btn" onclick="abrirAba('comando')">
+                    <span class="aba-icone">👑</span>
+                    Comando SAER
+                </button>
+            </div>
+            
+            <div class="abas-conteudo">
+                <!-- Aba Piloto -->
+                <div id="aba-piloto" class="aba-painel ativo">
+                    <div class="funcao-card">
+                        <div class="funcao-header">
+                            <!-- <img src="../image/piloto.png" alt="Piloto SAER" class="funcao-img"> -->
+                            <h2>Piloto SAER</h2>
+                        </div>
+                        <div class="funcao-info">
+                            <div class="info-item">
+                                <h3>Descrição</h3>
+                                <p>O piloto do SAER é responsável por prestar o apoio aéreo, visual aéreo em perseguições e ganhar experiência no grupamento.</p>
+                            </div>
+                            <div class="info-grid">
+                                <div class="info-card">
+                                    <h4>Requisitos</h4>
+                                    <ul>
+                                        <li>Saber pilotar helicoptero</li>
+                                        <li>Fazer o concurso</li>
+                                        <li>Ter boa modulação e comunicação</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Responsabilidades</h4>
+                                    <ul>
+                                        <li>Pilotar helicópteros</li>
+                                        <li>Ajudar os atiradores a cumprir a meta</li>
+                                        <li>Treinar e se dedicar ao grupamento</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Equipamentos</h4>
+                                    <ul>
+                                        <li>Armamento de acordo com a patente</li>
+                                        <li>Rádio</li>
+                                        <li>Rapel</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Especializações</h4>
+                                    <ul>
+                                        <li>Pilotar helicoptero</li>
+                                        <li>Resgate em favelas</li>
+                                        <li>Operações de alto risco</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aba Atirador -->
+                <div id="aba-atirador" class="aba-painel">
+                    <div class="funcao-card">
+                        <div class="funcao-header">
+                            <!-- <img src="../image/atirador.png" alt="Atirador SAER" class="funcao-img"> -->
+                            <h2>Atirador SAER</h2>
+                        </div>
+                        <div class="funcao-info">
+                            <div class="info-item">
+                                <h3>Descrição</h3>
+                                <p>O Atirador SAER é o especialista em tiro embarcado, responsável pela cobertura aérea e engajamento de alvos durante operações policiais e situações de alto risco.</p>
+                            </div>
+                            <div class="info-grid">
+                                <div class="info-card">
+                                    <h4>Requisitos</h4>
+                                    <ul>
+                                        <li>Ter noção de tiro</li>
+                                        <li>Fazer o concurso</li>
+                                        <li>Ter boa modulação e comunicação</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Responsabilidades</h4>
+                                    <ul>
+                                        <li>Ajudar manter a cidade em segurança</li>
+                                        <li>Fazer protocolos de voo</li>
+                                        <li>Prestar QRR em QRUs</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Armamentos</h4>
+                                    <ul>
+                                        <li>Armamento de acordo com a patente</li>
+                                        <li>Rádio</li>
+                                        <li>Rapel</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Especializações</h4>
+                                    <ul>
+                                        <li>Atirar de longas distancias com precisão</li>
+                                        <li>Modulação em protocolo de voo</li>
+                                        <li>Comunicação em horas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aba Administrador -->
+                <div id="aba-administrador" class="aba-painel">
+                    <div class="funcao-card">
+                        <div class="funcao-header">
+                            <!-- <img src="../image/administrador.png" alt="Administrador SAER" class="funcao-img"> -->
+                            <h2>Administrador SAER</h2>
+                        </div>
+                        <div class="funcao-info">
+                            <div class="info-item">
+                                <h3>Descrição</h3>
+                                <p>O Administrador SAER gerencia toda a estrutura administrativa, logística e operacional da unidade, garantindo que todos os recursos estejam disponíveis.</p>
+                            </div>
+                            <div class="info-grid">
+                                <div class="info-card">
+                                    <h4>Requisitos</h4>
+                                    <ul>
+                                        <li>Ser ativo no grupamento</li>
+                                        <li>Ajudar nos concursos SAER</li>
+                                        <li>Ser piloto e atirador de elite</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Responsabilidades</h4>
+                                    <ul>
+                                        <li>Monitorar os membros</li>
+                                        <li>Fazer o controle de metas</li>
+                                        <li>Administrar o bate ponto</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Áreas</h4>
+                                    <ul>
+                                        <li>Bate-ponto</li>
+                                        <li>Organização de fardamentos</li>
+                                        <li>Treinamentos e concursos</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Especializações</h4>
+                                    <ul>
+                                        <li>Conhecimento sobre o SAER</li>
+                                        <li>Planilhas administrativas</li>
+                                        <li>Auxilio em treinamentos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aba Elite -->
+                <div id="aba-elite" class="aba-painel">
+                    <div class="funcao-card">
+                        <div class="funcao-header">
+                            <!-- <img src="../image/elite.png" alt="Elite SAER" class="funcao-img"> -->
+                            <h2>Elite SAER</h2>
+                        </div>
+                        <div class="funcao-info">
+                            <div class="info-item">
+                                <h3>Descrição</h3>
+                                <p>A Elite SAER é composta pelos operadores mais experientes e capacitados, selecionados para as missões de maior complexidade e risco. Representam a excelência operacional.</p>
+                            </div>
+                            <div class="info-grid">
+                                <div class="info-card">
+                                    <h4>Requisitos</h4>
+                                    <ul>
+                                        <li>Todas as certificações SAER</li>
+                                        <li>Ser ativo no grupamento</li>
+                                        <li>Avaliação de desempenho superior</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Responsabilidades</h4>
+                                    <ul>
+                                        <li>Ajudar os pilotos e atiradores</li>
+                                        <li>Treinamento de novos operadores</li>
+                                        <li>Prestar QRRs de alto risco</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Capacitações</h4>
+                                    <ul>
+                                        <li>Operações especiais avançadas</li>
+                                        <li>Pilotar helicopteros de forma avançada</li>
+                                        <li>Relizar protocolos de voo sozinho</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Diferenciais</h4>
+                                    <ul>
+                                        <li>Cargo de Elite no grupamento</li>
+                                        <li>Prioridade em pacificação e incursão</li>
+                                        <li>Reconhecimento na matriz</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aba Comando -->
+                <div id="aba-comando" class="aba-painel">
+                    <div class="funcao-card">
+                        <div class="funcao-header">
+                            <!-- <img src="../image/comando.png" alt="Comando SAER" class="funcao-img"> -->
+                            <h2>Comando SAER</h2>
+                        </div>
+                        <div class="funcao-info">
+                            <div class="info-item">
+                                <h3>Descrição</h3>
+                                <p>O Comando SAER é responsável pela liderança estratégica da unidade, tomando decisões críticas e coordenando todas as operações aéreas da Polícia Civil do RJ.</p>
+                            </div>
+                            <div class="info-grid">
+                                <div class="info-card">
+                                    <h4>Requisitos</h4>
+                                    <ul>
+                                        <li>Ser indicado e nomeado por algum Delegado</li>
+                                        <li>Experiência em aviação policial</li>
+                                        <li>Liderança comprovada</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Responsabilidades</h4>
+                                    <ul>
+                                        <li>Comando geral da unidade</li>
+                                        <li>Autoriza treinamentos e concursos</li>
+                                        <li>Solicita a litacitação do SAER</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Estrutura</h4>
+                                    <ul>
+                                        <li>Comandante</li>
+                                        <li>Subcomandante</li>
+                                        <li>Administrador</li>
+                                    </ul>
+                                </div>
+                                <div class="info-card">
+                                    <h4>Especializações</h4>
+                                    <ul>
+                                        <li>Pilotar e atirar em operações de alto risco</li>
+                                        <li>Treinamentos de operações especiais</li>
+                                        <li>Representação institucional</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2026 SAER - Revoada RJ.</p>
+            <div class="redes">
+                <a href="#">Instagram</a>
+                <a href="#">Discord</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/app2.js"></script>
+</body>
+</html>

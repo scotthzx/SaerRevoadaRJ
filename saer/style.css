@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    background-color: #000000;
+    overflow-x: hidden;
+    background-image: url('image/bgSAER2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #000000;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    border-bottom: 1px solid #c7ac71;
+    position: relative;
+}
+
+.logo {
+    color: #c7ac71;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    left: 50px;
+    position: absolute;
+}
+
+.logo img {
+    width: 70px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #c7ac71;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.main-content {
+    width: 45%;
+    max-width: 600px;
+    min-height: 70vh;
+    border-radius: 5px;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-content .bar {
+    width: 10px;
+    height: 120px;
+    border: 2px solid #c7ac71;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #c7ac71;
+    left: -25px;
+    top: 5px;
+}
+
+.main-content h1 {
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    font-size: 100px;
+    color: #c7ac71;
+    line-height: 1;
+}
+
+.main-content h2 {
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #c7ac71;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 20px;
+}
+
+.section-cmd {
+    width: 700px;
+    max-width: 90%;
+    min-height: 500px;
+    border-radius: 5px;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.section-cmd .cmd {
+    position: relative;
+}
+
+.section-cmd .cmd .bar2 {
+    width: 10px;
+    height: 45px;
+    border: 2px solid #c7ac71;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #c7ac71;
+    left: -25px;
+    top: 15px;
+}
+
+.section-cmd .cmd h1 {
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    font-size: 50px;
+    color: #c7ac71;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.blocodocmd {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.blocodocmd .saer1,
+.blocodocmd .saer2 {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #c7ac71;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.blocodocmd .saer1:hover,
+.blocodocmd .saer2:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 0px 0px 8px 2px #c7ac71;
+}
+
+.blocodocmd .comando,
+.blocodocmd .sub-comando {
+    width: 135px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.blocodocmd p {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 0px;
+}
+
+.rodape {
+    background-color: transparent;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.redes a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #c7ac71;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .main-content h1 {
+        font-size: 60px;
+    }
+    
+    .main-content p {
+        font-size: 18px;
+    }
+    
+    .section-cmd {
+        width: 90%;
+    }
+    
+    .section-cmd .cmd h1 {
+        font-size: 36px;
+    }
+    
+    .blocodocmd {
+        gap: 20px;
+    }
+}

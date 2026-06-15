@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAER - Tutoriais</title>
+    <link rel="stylesheet" href="../style/tutoriais.css">
+    <link rel="icon" type="image/x-icon" href="../image/SaerLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">
+            <img src="../image/SaerLogo.png" alt="Logo SAER" class="logo1">
+        </a>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="helicopteros.html">Helicópteros</a></li>
+                <li><a href="galeria.html">Fotos</a></li>
+                <li><a href="funcoes.html">Funções</a></li>
+                <li><a href="tutoriais.html">Tutoriais</a></li>
+                <li><a href="regras.html">Regras</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <div class="main-content">
+            <h1>Tutoriais</h1>
+        </div>
+    </main>
+    
+    <section class="tutoriais-sec">
+        <!-- Navegação das Abas -->
+        <div class="tutoriais-nav">
+            <button class="tutorial-btn ativo" onclick="abrirTutorial('video')">
+                <span class="btn-icone">🎥</span>
+                Percurso de Voo
+            </button>
+            <button class="tutorial-btn" onclick="abrirTutorial('config')">
+                <span class="btn-icone">⚙️</span>
+                Configurações
+            </button>
+            <button class="tutorial-btn" onclick="abrirTutorial('protocolo')">
+                <span class="btn-icone">📋</span>
+                Protocolo de Posicionamento
+            </button>
+        </div>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tutoriais-conteudo">
+            <!-- Aba Vídeo - Percurso de Voo -->
+            <div id="tutorial-video" class="tutorial-painel ativo">
+                <div class="video-pagina">
+                    <div class="tutorial-card video-card-full">
+                        <div class="tutorial-header">
+                            <div class="tutorial-icone">🎥</div>
+                            <h2>Percurso de Voo</h2>
+                            <p class="tutorial-desc">Aprenda o percurso completo de voo do SAER</p>
+                        </div>
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/PjizQp767l4" 
+                                title="Percurso de Voo SAER" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <p>📌 Assista ao tutorial completo do percurso de voo e aprenda as melhores práticas para pilotar com segurança e eficiência.</p>
+                        </div>
+                    </div>
+
+                    <!-- Dicas Extras -->
+                    <div class="dicas-extras">
+                        <div class="dicas-card">
+                            <h3>💡 Dicas para Pilotos Iniciantes</h3>
+                            <ul>
+                                <li>Pratique o percurso em altura elevada primeiro</li>
+                                <li>Mantenha sempre contato com a torre de controle</li>
+                                <li>Verifique o checklist antes de cada decolagem</li>
+                                <li>Treine pousos de emergência regularmente</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="dicas-card">
+                            <h3>⚠️ Avisos Importantes</h3>
+                            <ul>
+                                <li>Nunca desligue o motor em pleno voo</li>
+                                <li>Respeite o teto máximo de cada aeronave</li>
+                                <li>Mantenha distância segura de outras aeronaves</li>
+                                <li>Em caso de pane, comunique imediatamente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aba Configurações -->
+            <div id="tutorial-config" class="tutorial-painel">
+                <div class="config-pagina">
+                    <div class="tutorial-card config-card-full">
+                        <div class="tutorial-header">
+                            <div class="tutorial-icone">⚙️</div>
+                            <h2>Configurações Recomendadas</h2>
+                            <p class="tutorial-desc">Para Pilotos de Helicóptero</p>
+                        </div>
+                        
+                        <div class="config-intro">
+                            <!-- <span class="emoji-saer"></span> -->
+                            <p>A fim de garantir maior controle, precisão e segurança nas operações aéreas, estas são as melhores configurações de teclas para os pilotos utilizarem em suas aeronaves:</p>
+                        </div>
+
+                        <div class="config-lista">
+                            <div class="config-item">
+                                <div class="tecla">
+                                    <kbd>L. SHIFT</kbd>
+                                </div>
+                                <div class="seta">→</div>
+                                <div class="acao">
+                                    <span class="acao-icone">🔹</span>
+                                    Acelerar
+                                </div>
+                            </div>
+
+                            <div class="config-item">
+                                <div class="tecla">
+                                    <kbd>L. CTRL</kbd>
+                                </div>
+                                <div class="seta">→</div>
+                                <div class="acao">
+                                    <span class="acao-icone">🔹</span>
+                                    Desacelerar
+                                </div>
+                            </div>
+
+                            <div class="config-item">
+                                <div class="tecla">
+                                    <kbd>A</kbd>
+                                </div>
+                                <div class="seta">→</div>
+                                <div class="acao">
+                                    <span class="acao-icone">🔹</span>
+                                    Guinar à esquerda
+                                </div>
+                            </div>
+
+                            <div class="config-item">
+                                <div class="tecla">
+                                    <kbd>D</kbd>
+                                </div>
+                                <div class="seta">→</div>
+                                <div class="acao">
+                                    <span class="acao-icone">🔹</span>
+                                    Guinar à direita
+                                </div>
+                            </div>
+
+                            <div class="config-item">
+                                <div class="tecla mouse">
+                                    <kbd>Mouse Esquerdo</kbd>
+                                </div>
+                                <div class="seta">→</div>
+                                <div class="acao">
+                                    <span class="acao-icone">🔹</span>
+                                    Rolar para a esquerda
+                                </div>
+                            </div>
+
+                            <div class="config-item">
+                                <div class="tecla mouse">
+                                    <kbd>Mouse Direito</kbd>
+                                </div>
+                                <div class="seta">→</div>
+                                <div class="acao">
+                                    <span class="acao-icone">🔹</span>
+                                    Rolar para a direita
+                                </div>
+                            </div>
+
+                            <div class="config-item">
+                                <div class="tecla">
+                                    <kbd>W</kbd>
+                                </div>
+                                <div class="seta">→</div>
+                                <div class="acao">
+                                    <span class="acao-icone">🔹</span>
+                                    Inclinar para frente
+                                </div>
+                            </div>
+
+                            <div class="config-item">
+                                <div class="tecla">
+                                    <kbd>S</kbd>
+                                </div>
+                                <div class="seta">→</div>
+                                <div class="acao">
+                                    <span class="acao-icone">🔹</span>
+                                    Inclinar para trás
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="config-footer">
+                            <p>📍 Essas configurações permitem um voo mais ágil e responsivo, usando <strong>mouse + teclado</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aba Protocolo de Posicionamento -->
+            <div id="tutorial-protocolo" class="tutorial-painel">
+                <div class="protocolo-container">
+                    <!-- Cabeçalho -->
+                    <div class="protocolo-header">
+                        <h2>📋 Protocolo de Posicionamento S.A.E.R 📋</h2>
+                        <p class="protocolo-subtitulo">Manual de Pilotagem e Direção</p>
+                    </div>
+
+                    <!-- Introdução -->
+                    <div class="protocolo-intro">
+                        <p>O Manual de Pilotagem e Direção é fundamental para todos os pilotos de helicóptero em operações de patrulhamento, garantindo eficiência e precisão em cada ação realizada.</p>
+                    </div>
+
+                    <!-- Importância do Protocolo -->
+                    <div class="protocolo-importancia">
+                        <h3>📍 Importância do Protocolo</h3>
+                        
+                        <div class="importancia-grid">
+                            <div class="importancia-card">
+                                <div class="importancia-icone">🔹</div>
+                                <div class="importancia-texto">
+                                    <h4>Segurança</h4>
+                                    <p>Define diretrizes claras de posicionamento da aeronave em diferentes cenários, protegendo pilotos, tripulação e demais envolvidos.</p>
+                                </div>
+                            </div>
+
+                            <div class="importancia-card">
+                                <div class="importancia-icone">🔹</div>
+                                <div class="importancia-texto">
+                                    <h4>Eficiência</h4>
+                                    <p>Permite manobras mais ágeis e seguras, reduzindo riscos e aumentando a eficácia das operações.</p>
+                                </div>
+                            </div>
+
+                            <div class="importancia-card">
+                                <div class="importancia-icone">🔹</div>
+                                <div class="importancia-texto">
+                                    <h4>Decisão Rápida</h4>
+                                    <p>Em situações dinâmicas, o protocolo orienta o piloto a agir com rapidez e assertividade.</p>
+                                </div>
+                            </div>
+
+                            <div class="importancia-card">
+                                <div class="importancia-icone">🔹</div>
+                                <div class="importancia-texto">
+                                    <h4>Orientação Visual</h4>
+                                    <p>O uso de esquemas e ilustrações facilita o aprendizado e a correta execução durante treinamentos e operações reais.</p>
+                                </div>
+                            </div>
+
+                            <div class="importancia-card">
+                                <div class="importancia-icone">🔹</div>
+                                <div class="importancia-texto">
+                                    <h4>Treinamento</h4>
+                                    <p>Serve como base sólida para novos pilotos, padronizando práticas recomendadas e preparando-os para missões complexas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagens do Protocolo -->
+                    <div class="protocolo-imagens">
+                        <div class="imagem-card">
+                            <div class="imagem-titulo">📐 Esquema de Posicionamento</div>
+                            <div class="imagem-wrapper">
+                                <img src="../image/pp1.png" alt="Esquema de Posicionamento SAER">
+                            </div>
+                        </div>
+                        
+                        <div class="imagem-card">
+                            <div class="imagem-titulo">📊 Manual de Pilotagem</div>
+                            <div class="imagem-wrapper">
+                                <img src="../image/pp2.png" alt="Manual de Pilotagem SAER">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conclusão -->
+                    <div class="protocolo-conclusao">
+                        <h3>📍 Conclusão</h3>
+                        <p>O Protocolo de Posicionamento S.A.E.R é um instrumento essencial para a aviação tática, garantindo operações mais seguras, organizadas e eficazes. Segui-lo é preservar vidas e assegurar o sucesso das missões.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2026 SAER - Revoada RJ.</p>
+            <div class="redes">
+                <a href="#">Instagram</a>
+                <a href="#">Discord</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/app4.js"></script>
+</body>
+</html>

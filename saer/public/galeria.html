@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAER - Galeria</title>
+    <link rel="stylesheet" href="../style/galeria.css">
+    <link rel="icon" type="image/x-icon" href="../image/SaerLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">
+            <img src="../image/SaerLogo.png" alt="Logo SAER" class="logo1">
+        </a>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="helicopteros.html">Helicópteros</a></li>
+                <li><a href="galeria.html">Fotos</a></li>
+                <li><a href="funcoes.html">Funções</a></li>
+                <li><a href="tutoriais.html">Tutoriais</a></li>
+                <li><a href="regras.html">Regras</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <div class="main-content">
+            <h1>Galeria</h1>
+        </div>
+    </main>
+    
+    <section class="galeria-sec">
+        <div class="galeria-container">
+            <button class="nav-btn prev-btn" onclick="mudarFoto(-1)">
+                <span>&#10094;</span>
+            </button>
+            
+            <div class="foto-display">
+                <div class="foto-wrapper">
+                    <img id="fotoAtual" src="../image/galeria1.png" alt="Foto SAER" class="foto-principal">
+                    <div class="foto-info">
+                        <p id="fotoTitulo">Operação Phoenix</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="nav-btn next-btn" onclick="mudarFoto(1)">
+                <span>&#10095;</span>
+            </button>
+        </div>
+        
+        <div class="miniaturas">
+            <div class="miniatura ativa" onclick="fotoEspecifica(0)">
+                <img src="../image/galeria1.png" alt="Foto 1">
+            </div>
+            <div class="miniatura" onclick="fotoEspecifica(1)">
+                <img src="../image/galeria2.png" alt="Foto 2">
+            </div>
+            <div class="miniatura" onclick="fotoEspecifica(2)">
+                <img src="../image/galeria3.png" alt="Foto 3">
+            </div>
+            <div class="miniatura" onclick="fotoEspecifica(3)">
+                <img src="../image/galeria4.png" alt="Foto 4">
+            </div>
+            <div class="miniatura" onclick="fotoEspecifica(4)">
+                <img src="../image/galeria5.png" alt="Foto 5">
+            </div>
+        </div>
+        
+        <div class="contador">
+            <span id="fotoContador">1 / 5</span>
+        </div>
+    </section>
+    
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2026 SAER - Revoada RJ.</p>
+            <div class="redes">
+                <a href="#">Instagram</a>
+                <a href="#">Discord</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/app.js"></script>
+</body>
+</html>

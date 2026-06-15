@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAER - Regras</title>
+    <link rel="stylesheet" href="../style/regras.css">
+    <link rel="icon" type="image/x-icon" href="../image/SaerLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">
+            <img src="../image/SaerLogo.png" alt="Logo SAER" class="logo1">
+        </a>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="helicopteros.html">Helicópteros</a></li>
+                <li><a href="galeria.html">Fotos</a></li>
+                <li><a href="funcoes.html">Funções</a></li>
+                <li><a href="tutoriais.html">Tutoriais</a></li>
+                <li><a href="regras.html">Regras</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <div class="main-content">
+            <h1>Regras</h1>
+        </div>
+    </main>
+    
+    <section class="regras-sec">
+        <div class="regras-container">
+            <!-- Abas de Navegação -->
+            <div class="regras-nav">
+                <button class="regras-btn ativo" onclick="abrirRegras('gerais')">
+                    <span class="btn-icone">📋</span>
+                    Regras Gerais
+                </button>
+                <button class="regras-btn" onclick="abrirRegras('admin')">
+                    <span class="btn-icone">🪂</span>
+                    Administração SAER
+                </button>
+            </div>
+
+            <!-- Conteúdo das Regras Gerais -->
+            <div id="regras-gerais" class="regras-painel ativo">
+                <div class="regras-header-card">
+                    <h2>📜 REGRAS GERAIS DO SAER</h2>
+                    <p>Operações Aeropoliciais da Polícia Civil do Estado do Rio de Janeiro</p>
+                </div>
+
+                <div class="artigos-grid">
+                    <!-- Artigo 1 -->
+                    <div class="artigo-card destaque">
+                        <div class="artigo-numero">Art. 1°</div>
+                        <div class="artigo-conteudo">
+                            <p>As Operações Aeropoliciais da Polícia Civil do Estado do Rio de Janeiro serão realizadas exclusivamente pelos agentes da <span class="destaque-texto">@・『 EQP 』SAER</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 2 -->
+                    <div class="artigo-card proibido">
+                        <div class="artigo-numero">Art. 2°</div>
+                        <div class="artigo-conteudo">
+                            <p>Fica proibido o patrulhamento aéreo sozinho <span class="excecao">(Exceto ELITE)</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 3 -->
+                    <div class="artigo-card proibido">
+                        <div class="artigo-numero">Art. 3°</div>
+                        <div class="artigo-conteudo">
+                            <p>É proibido patrulhar utilizando helicópteros de outras corporações <span class="destaque-texto">(utilizar sempre o livery 1)</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 4 -->
+                    <div class="artigo-card obrigatorio">
+                        <div class="artigo-numero">Art. 4°</div>
+                        <div class="artigo-conteudo">
+                            <p>É obrigatório o uso do fardamento para o patrulhamento</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 5 -->
+                    <div class="artigo-card obrigatorio">
+                        <div class="artigo-numero">Art. 5°</div>
+                        <div class="artigo-conteudo">
+                            <p>Ao iniciar o patrulhamento aéreo, o agente <span class="destaque-texto">@・『 EQP 』SAER</span> deve modular o início do protocolo de voo na rádio, deixando a guarnição ciente de que o apoio aéreo está à disposição da equipe</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 6 -->
+                    <div class="artigo-card obrigatorio">
+                        <div class="artigo-numero">Art. 6°</div>
+                        <div class="artigo-conteudo">
+                            <p>Obrigatório o uso da GOPRO</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 7 -->
+                    <div class="artigo-card proibido">
+                        <div class="artigo-numero">Art. 7°</div>
+                        <div class="artigo-conteudo">
+                            <p>Proibido transportar cidadão/preso no Phoenix</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 8 -->
+                    <div class="artigo-card proibido">
+                        <div class="artigo-numero">Art. 8°</div>
+                        <div class="artigo-conteudo">
+                            <p>É extremamente proibido fazer abordagens sem apoio terrestre</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 9 -->
+                    <div class="artigo-card prioridade">
+                        <div class="artigo-numero">Art. 9°</div>
+                        <div class="artigo-conteudo">
+                            <p>Todo Phoenix deve dar prioridade em apoios de QRU de Tráfico e Código 5</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 10 -->
+                    <div class="artigo-card proibido">
+                        <div class="artigo-numero">Art. 10°</div>
+                        <div class="artigo-conteudo">
+                            <p>Proibido iniciar protocolo de voo com fardamento de outro grupamento ou guarnição especial</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 11 -->
+                    <div class="artigo-card proibido">
+                        <div class="artigo-numero">Art. 11°</div>
+                        <div class="artigo-conteudo">
+                            <p>Proibido iniciar protocolo de voo sem o fardamento <span class="excecao">(descaracterizado)</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 12 -->
+                    <div class="artigo-card proibido">
+                        <div class="artigo-numero">Art. 12°</div>
+                        <div class="artigo-conteudo">
+                            <p>Proibido pousar o Phoenix no meio das ruas</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 13 -->
+                    <div class="artigo-card elite">
+                        <div class="artigo-numero">Art. 13°</div>
+                        <div class="artigo-conteudo">
+                            <p>O uso do Helicóptero Pantera é exclusivo do <span class="destaque-texto">Phoenix Elite</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 14 -->
+                    <div class="artigo-card obrigatorio">
+                        <div class="artigo-numero">Art. 14°</div>
+                        <div class="artigo-conteudo">
+                            <p>No uso do Helicóptero Pantera, é obrigatório colocar o livery do grupamento</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 15 -->
+                    <div class="artigo-card elite">
+                        <div class="artigo-numero">Art. 15°</div>
+                        <div class="artigo-conteudo">
+                            <p>Para estar apto a fazer a prova da Elite, é preciso atingir <span class="destaque-texto">04:00 horas</span> em uma semana, ter boa frequência/desempenho, boa conduta e não possuir nenhum tipo de advertência</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 16 -->
+                    <div class="artigo-card meta">
+                        <div class="artigo-numero">Art. 16°</div>
+                        <div class="artigo-conteudo">
+                            <p>Todo Anjo Negro tem a obrigação de cumprir/justificar a meta de <span class="destaque-texto">02:00 semanais</span> para não ser exonerado</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 17 -->
+                    <div class="artigo-card meta">
+                        <div class="artigo-numero">Art. 17°</div>
+                        <div class="artigo-conteudo">
+                            <p>Todo Anjo Negro Elite tem a obrigação de cumprir/justificar a meta de <span class="destaque-texto">04:00 semanais</span> para não ser rebaixado</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 18 -->
+                    <div class="artigo-card obrigatorio">
+                        <div class="artigo-numero">Art. 18°</div>
+                        <div class="artigo-conteudo">
+                            <p>Caso o Anjo Negro não comparecer na reunião do grupamento, deverá obrigatoriamente postar a justificativa</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo 19 - Abordagem -->
+                    <div class="artigo-card abordagem">
+                        <div class="artigo-numero">Art. 19°</div>
+                        <div class="artigo-conteudo">
+                            <p>Para abordar outro helicóptero vocês deverão anunciar no 190 esta mensagem com no máximo 3 avisos:</p>
+                            <div class="mensagem-radio">
+                                <p>"Polícia Civil" Atenção, helicóptero que está sobrevoando nas proximidades de <span class="variavel">[informe o local]</span>: pouse imediatamente no heliponto mais próximo. Caso contrário, será considerado uma ameaça e será alvejado. Aviso número <span class="variavel">X</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo das Regras Admin -->
+            <div id="regras-admin" class="regras-painel">
+                <div class="regras-header-card admin-header">
+                    <h2>🪂 ADMINISTRAÇÃO SAER 🪂</h2>
+                    <p>Regras administrativas do grupamento</p>
+                </div>
+
+                <div class="artigos-grid">
+                    <!-- Artigo Admin 1 -->
+                    <div class="artigo-card admin-card">
+                        <div class="artigo-numero">Art. 01°</div>
+                        <div class="artigo-conteudo">
+                            <p>Todo membro da ADM S.A.E.R deverá ser <span class="destaque-texto">ativo e produtivo</span> dentro do grupamento</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo Admin 2 -->
+                    <div class="artigo-card admin-card">
+                        <div class="artigo-numero">Art. 02°</div>
+                        <div class="artigo-conteudo">
+                            <p>Todo recrutamento de <span class="destaque-texto">atirador e paraquedista</span> deverá ser aplicado em um dia da semana com dois horários <span class="horario">tarde/noite</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo Admin 3 -->
+                    <div class="artigo-card admin-card">
+                        <div class="artigo-numero">Art. 03°</div>
+                        <div class="artigo-conteudo">
+                            <p>Todo recrutamento de <span class="destaque-texto">piloto</span> deverá ser aplicado uma vez na semana</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo Admin 4 -->
+                    <div class="artigo-card admin-card obrigatorio">
+                        <div class="artigo-numero">Art. 04°</div>
+                        <div class="artigo-conteudo">
+                            <p>Obrigatório apresentar o material a todos que foram aprovados nos concursos de <span class="destaque-texto">atirador, piloto ou paraquedista</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo Admin 5 -->
+                    <div class="artigo-card admin-card elite">
+                        <div class="artigo-numero">Art. 05°</div>
+                        <div class="artigo-conteudo">
+                            <p>Todo recrutamento do <span class="destaque-texto">Anjo Negro Elite</span> deverá ser aplicado uma vez ao mês</p>
+                        </div>
+                    </div>
+
+                    <!-- Artigo Admin 6 -->
+                    <div class="artigo-card admin-card">
+                        <div class="artigo-numero">Art. 06°</div>
+                        <div class="artigo-conteudo">
+                            <p>Sempre preencher os relatórios da maneira descrita em <span class="destaque-texto">mensagens fixadas</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2026 SAER - Revoada RJ.</p>
+            <div class="redes">
+                <a href="#">Instagram</a>
+                <a href="#">Discord</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/app3.js"></script>
+</body>
+</html>
