@@ -22,6 +22,7 @@
                 <li><a href="funcoes.html">Funções</a></li>
                 <li><a href="tutoriais.html">Tutoriais</a></li>
                 <li><a href="regras.html">Regras</a></li>
+                <li><a href="memorial.html">Memorial</a></li>
             </ul>
         </nav>
     </header>
@@ -34,44 +35,31 @@
     
     <section class="galeria-sec">
         <div class="galeria-container">
-            <button class="nav-btn prev-btn" onclick="mudarFoto(-1)">
+            <button class="nav-btn prev-btn" onclick="mudarFoto(-1)" aria-label="Foto anterior">
                 <span>&#10094;</span>
             </button>
             
             <div class="foto-display">
                 <div class="foto-wrapper">
                     <img id="fotoAtual" src="../image/galeria1.png" alt="Foto SAER" class="foto-principal">
-                    <div class="foto-info">
-                        <p id="fotoTitulo">Operação Phoenix</p>
-                    </div>
                 </div>
             </div>
             
-            <button class="nav-btn next-btn" onclick="mudarFoto(1)">
+            <button class="nav-btn next-btn" onclick="mudarFoto(1)" aria-label="Próxima foto">
                 <span>&#10095;</span>
             </button>
         </div>
         
-        <div class="miniaturas">
-            <div class="miniatura ativa" onclick="fotoEspecifica(0)">
-                <img src="../image/galeria1.png" alt="Foto 1">
-            </div>
-            <div class="miniatura" onclick="fotoEspecifica(1)">
-                <img src="../image/galeria2.png" alt="Foto 2">
-            </div>
-            <div class="miniatura" onclick="fotoEspecifica(2)">
-                <img src="../image/galeria3.png" alt="Foto 3">
-            </div>
-            <div class="miniatura" onclick="fotoEspecifica(3)">
-                <img src="../image/galeria4.png" alt="Foto 4">
-            </div>
-            <div class="miniatura" onclick="fotoEspecifica(4)">
-                <img src="../image/galeria5.png" alt="Foto 5">
-            </div>
+        <div class="contador">
+            <span id="fotoContador">1 / 17</span>
         </div>
         
-        <div class="contador">
-            <span id="fotoContador">1 / 5</span>
+        <!-- Grid de Miniaturas -->
+        <div class="miniaturas-wrapper">
+            <!-- <div class="titulo-miniaturas">📸 Todas as Fotos</div> -->
+            <div class="miniaturas" id="miniaturasContainer">
+                <!-- Preenchido automaticamente pelo JavaScript -->
+            </div>
         </div>
     </section>
     
