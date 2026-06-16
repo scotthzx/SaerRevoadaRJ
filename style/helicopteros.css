@@ -176,12 +176,12 @@ body {
 }
 
 .heli-card.pelicano-sem {
-    border-color: rgba(68, 136, 255, 0.4);
+    border-color: rgba(255, 68, 68, 0.4);
 }
 
 .heli-card.pelicano-sem:hover {
-    border-color: #4488ff;
-    box-shadow: 0px 10px 30px rgba(68, 136, 255, 0.3);
+    border-color: #ff4444;
+    box-shadow: 0px 10px 30px rgba(255, 68, 68, 0.3);
 }
 
 .heli-card.raptor {
@@ -241,7 +241,7 @@ body {
 }
 
 .heli-tag.transporte {
-    background-color: #4488ff;
+    background-color: #ff4444;
     color: white;
 }
 
@@ -422,7 +422,7 @@ body {
 }
 
 .legenda-cor.transporte {
-    background-color: #4488ff;
+    background-color: #ff4444;
 }
 
 .legenda-cor.ataque {
