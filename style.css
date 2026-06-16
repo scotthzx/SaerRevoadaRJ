@@ -77,15 +77,14 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-menu a:hover::after {
+/* Barrinha aparece no hover E no ativo */
+.nav-menu a:hover::after,
+.nav-menu a.ativo::after {
     width: 100%;
 }
 
-.nav-menu a.ativo::after,
-.nav-menu a:hover::after {
-    width: 100%;
-}
-
+/* Cor do texto quando ativo ou hover */
+.nav-menu a:hover,
 .nav-menu a.ativo {
     color: #c7ac71;
 }
