@@ -19,6 +19,9 @@ body {
     flex-direction: column;
 }
 
+/* ==================== */
+/* HEADER */
+/* ==================== */
 .header {
     background-color: #000000;
     padding: 25px 50px;
@@ -29,6 +32,7 @@ body {
     font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     border-bottom: 1px solid #c7ac71;
     position: relative;
+    z-index: 100;
 }
 
 .logo {
@@ -57,34 +61,64 @@ body {
     text-decoration: none;
     font-size: 20px;
     transition: color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    padding-bottom: 5px;
 }
 
-.nav-menu a:hover {
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c7ac71;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.nav-menu a.ativo::after,
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.nav-menu a.ativo {
     color: #c7ac71;
 }
 
-.main {
+/* ==================== */
+/* HERO SECTION */
+/* ==================== */
+.hero {
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
-    padding: 50px 0;
+    justify-content: center;
+    padding: 50px;
 }
 
-.main-content {
-    width: 45%;
-    max-width: 600px;
-    min-height: 70vh;
-    border-radius: 5px;
-    margin-left: 10%;
+.hero-content {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+
+.hero-texto {
+    flex: 1;
     position: relative;
 }
 
-.main-content .bar {
+.hero-barra {
     width: 10px;
-    height: 120px;
+    height: 133px;
     border: 2px solid #c7ac71;
     position: absolute;
     border-radius: 10px;
@@ -93,111 +127,418 @@ body {
     top: 5px;
 }
 
-.main-content h1 {
+.hero-texto h1 {
     font-family: 'Anton', sans-serif;
     font-style: italic;
     font-size: 100px;
     color: #c7ac71;
     line-height: 1;
+    margin-bottom: 10px;
 }
 
-.main-content h2 {
+.hero-texto h2 {
     font-family: 'Anton', sans-serif;
     font-style: italic;
-    font-size: 20px;
+    font-size: 24px;
     color: #c7ac71;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-slogan {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
     letter-spacing: 1px;
     margin-bottom: 20px;
-}
-
-.main-content p {
-    font-family: 'Anton', sans-serif;
-    font-size: 24px;
-    line-height: 1.4;
-    margin-top: 20px;
-}
-
-.section-cmd {
-    width: 700px;
-    max-width: 90%;
-    min-height: 500px;
-    border-radius: 5px;
-    margin-left: 10%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.section-cmd .cmd {
-    position: relative;
-}
-
-.section-cmd .cmd .bar2 {
-    width: 10px;
-    height: 45px;
-    border: 2px solid #c7ac71;
-    position: absolute;
-    border-radius: 10px;
-    background-color: #c7ac71;
-    left: -25px;
-    top: 15px;
-}
-
-.section-cmd .cmd h1 {
-    font-family: 'Anton', sans-serif;
     font-style: italic;
-    font-size: 50px;
-    color: #c7ac71;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
 }
 
-.blocodocmd {
+.hero-descricao {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.hero-botoes {
     display: flex;
-    gap: 50px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
-.blocodocmd .saer1,
-.blocodocmd .saer2 {
-    width: 200px;
-    height: 200px;
-    border: 2px solid #c7ac71;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-.blocodocmd .saer1:hover,
-.blocodocmd .saer2:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-    box-shadow: 0px 0px 8px 2px #c7ac71;
-}
-
-.blocodocmd .comando,
-.blocodocmd .sub-comando {
-    width: 135px;
-    height: 130px;
-    border-radius: 50%;
-}
-
-.blocodocmd p {
+.btn-hero {
+    padding: 15px 30px;
     font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 0px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
-.rodape {
+.btn-primario {
+    background-color: rgba(199, 172, 113, 0.2);
+    color: #c7ac71;
+    border: 2px solid #c7ac71;
+}
+
+.btn-primario:hover {
+    background-color: rgba(199, 172, 113, 0.4);
+    box-shadow: 0px 0px 15px rgba(199, 172, 113, 0.5);
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
     background-color: transparent;
     color: white;
-    padding: 20px 0;
+    border: 2px solid #555555;
+}
+
+.btn-secundario:hover {
+    border-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.hero-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-helicoptero {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    filter: drop-shadow(0px 10px 30px rgba(199, 172, 113, 0.3));
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ==================== */
+/* SEÇÃO HEADER */
+/* ==================== */
+.secao-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.secao-barra {
+    width: 8px;
+    height: 40px;
+    border: 2px solid #c7ac71;
+    border-radius: 10px;
+    background-color: #c7ac71;
+}
+
+.secao-header h2 {
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    color: #c7ac71;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ==================== */
+/* AERONAVES */
+/* ==================== */
+.aeronaves-sec {
+    padding: 80px 50px;
+}
+
+.aeronaves-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aeronave-card {
+    border: 2px solid rgba(199, 172, 113, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.aeronave-card:hover {
+    border-color: #c7ac71;
+    box-shadow: 0px 0px 20px 5px rgba(199, 172, 113, 0.3);
+    transform: translateY(-10px);
+}
+
+.aeronave-card.destaque {
+    border-color: #c7ac71;
+    background: linear-gradient(135deg, rgba(41, 41, 41, 0.5), rgba(199, 172, 113, 0.1));
+}
+
+.aeronave-img {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.aeronave-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.aeronave-card:hover .aeronave-img img {
+    transform: scale(1.1);
+}
+
+.aeronave-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.aeronave-info h3 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 24px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.aeronave-info p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: #c7ac71;
+    border: 1px solid #c7ac71;
+    font-family: 'Anton', sans-serif;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.btn-card:hover {
+    background-color: rgba(199, 172, 113, 0.2);
+}
+
+/* ==================== */
+/* COMANDANTES */
+/* ==================== */
+.comandantes-sec {
+    padding: 80px 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.comandantes-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.comandante-card {
+    width: 250px;
+    border: 2px solid #c7ac71;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+    overflow: hidden;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.comandante-card:hover {
+    box-shadow: 0px 0px 20px 5px rgba(199, 172, 113, 0.4);
+    transform: translateY(-10px);
+}
+
+.comandante-foto {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.comandante-foto img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #c7ac71;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.comandante-card:hover .comandante-foto img {
+    transform: scale(1.1);
+}
+
+.comandante-info {
+    padding: 20px;
+}
+
+.cargo-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: rgba(199, 172, 113, 0.2);
+    color: #c7ac71;
+    border: 1px solid #c7ac71;
+    border-radius: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.cargo-tag.sub {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: #999999;
+}
+
+.comandante-info h3 {
+    font-family: 'Anton', sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+    margin: 10px 0 5px;
+}
+
+.comandante-info p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #999999;
+    font-size: 14px;
+}
+
+/* ==================== */
+/* LINKS RÁPIDOS */
+/* ==================== */
+.links-sec {
+    padding: 80px 50px;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.link-card {
+    border: 2px solid rgba(199, 172, 113, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.link-card:hover {
+    border-color: #c7ac71;
+    box-shadow: 0px 0px 20px 5px rgba(199, 172, 113, 0.3);
+    transform: translateY(-10px);
+}
+
+.link-icone {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.link-card h3 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 22px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.link-card p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+/* ==================== */
+/* ESTATÍSTICAS */
+/* ==================== */
+.stats-sec {
+    padding: 60px 50px;
+    background-color: rgba(199, 172, 113, 0.05);
+    border-top: 1px solid rgba(199, 172, 113, 0.2);
+    border-bottom: 1px solid rgba(199, 172, 113, 0.2);
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-numero {
+    display: block;
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    color: #c7ac71;
+    line-height: 1;
+}
+
+.stat-label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #999999;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==================== */
+/* RODAPÉ */
+/* ==================== */
+.rodape {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 30px 0;
     margin-top: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 1px solid rgba(199, 172, 113, 0.3);
 }
 
 .rodape-conteudo {
@@ -208,42 +549,153 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rodape-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rodape-logo {
+    width: 40px;
+    height: auto;
+}
+
+.rodape-info p {
+    color: #c7ac71;
+    font-weight: bold;
 }
 
 .redes {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .redes a {
-    color: white;
+    color: #cccccc;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 14px;
 }
 
 .redes a:hover {
     color: #c7ac71;
 }
 
-/* Media queries para responsividade */
+/* ==================== */
+/* RESPONSIVIDADE */
+/* ==================== */
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-texto h1 {
+        font-size: 80px;
+    }
+    
+    .hero-descricao {
+        max-width: 100%;
+    }
+    
+    .hero-botoes {
+        justify-content: center;
+    }
+    
+    .hero-barra {
+        display: none;
+    }
+    
+    .hero-imagem {
+        order: -1;
+    }
+    
+    .hero-helicoptero {
+        max-width: 350px;
+    }
+}
+
 @media (max-width: 768px) {
-    .main-content h1 {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        position: relative;
+        left: auto;
+        margin-bottom: 10px;
+    }
+    
+    .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-menu a {
+        font-size: 14px;
+    }
+    
+    .hero {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+    
+    .hero-texto h1 {
         font-size: 60px;
     }
     
-    .main-content p {
+    .hero-texto h2 {
         font-size: 18px;
     }
     
-    .section-cmd {
-        width: 90%;
+    .aeronaves-sec,
+    .comandantes-sec,
+    .links-sec {
+        padding: 50px 20px;
     }
     
-    .section-cmd .cmd h1 {
-        font-size: 36px;
+    .secao-header h2 {
+        font-size: 30px;
     }
     
-    .blocodocmd {
-        gap: 20px;
+    .stats-grid {
+        gap: 30px;
+    }
+    
+    .stat-numero {
+        font-size: 40px;
+    }
+    
+    .rodape-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-texto h1 {
+        font-size: 45px;
+    }
+    
+    .hero-slogan {
+        font-size: 16px;
+    }
+    
+    .btn-hero {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .secao-header h2 {
+        font-size: 24px;
+    }
+    
+    .comandante-card {
+        width: 100%;
+        max-width: 250px;
     }
 }

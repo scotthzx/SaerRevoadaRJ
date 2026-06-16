@@ -57,9 +57,32 @@ body {
     text-decoration: none;
     font-size: 20px;
     transition: color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    padding-bottom: 5px;
 }
 
-.nav-menu a:hover {
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c7ac71;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.nav-menu a.ativo::after,
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.nav-menu a.ativo {
     color: #c7ac71;
 }
 

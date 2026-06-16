@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAER</title>
+    <title>SAER - Serviço Aeropolicial</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="image/SaerLogo.png">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 
         <nav>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="ativo">Home</a></li>
                 <li><a href="public/helicopteros.html">Helicópteros</a></li>
                 <li><a href="public/galeria.html">Fotos</a></li>
                 <li><a href="public/funcoes.html">Funções</a></li>
@@ -27,41 +27,165 @@
         </nav>
     </header>
     
-    <main class="main">
-        <div class="main-content">
-            <div class="bar"></div>
-            <h1>SAER</h1>
-            <h2>Voamos para lutar e salvar!</h2>
-            <p>O SAER da PCERJ é o Serviço Aeropolicial, a unidade aérea da Polícia Civil do Estado do Rio de Janeiro. Ele opera helicópteros utilizados em missões policiais, apoio a operações, transporte de equipes especiais, resgates e observação aérea. O SAER é vinculado à Coordenadoria de Recursos Especiais, que é a tropa de operações especiais da Polícia Civil do Rio de Janeiro.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-texto">
+                <div class="hero-barra"></div>
+                <h1>SAER</h1>
+                <h2>Serviço Aeropolicial</h2>
+                <p class="hero-slogan">"Voamos para lutar e salvar!"</p>
+                <p class="hero-descricao">O SAER da PCERJ é o Serviço Aeropolicial, a unidade aérea da Polícia Civil do Estado do Rio de Janeiro. Opera helicópteros utilizados em missões policiais, apoio a operações, transporte de equipes especiais, resgates e observação aérea.</p>
+                <div class="hero-botoes">
+                    <a href="public/helicopteros.html" class="btn-hero btn-primario">Nossas Aeronaves</a>
+                    <a href="public/funcoes.html" class="btn-hero btn-secundario">Nossas Funções</a>
+                </div>
+            </div>
+            <div class="hero-imagem">
+                <!-- <img src="image/as350.png" alt="Helicóptero SAER Phoenix" class="hero-helicoptero"> -->
+            </div>
         </div>
-    </main>
-    
-    <section class="section-cmd">
-        <div class="cmd">
-            <div class="bar2"></div>
-            <h1>Comandantes</h1>
-            <div class="blocodocmd">
-                <div class="saer1">
-                    <img src="image/scott.png" alt="comando" class="comando">
-                    <p>Comandante</p>
-                    <p>Scott</p>
+    </section>
+
+    <!-- Seção de Helicópteros -->
+    <section class="aeronaves-sec">
+        <div class="secao-header">
+            <div class="secao-barra"></div>
+            <h2>Nossas Aeronaves</h2>
+        </div>
+        <div class="aeronaves-grid">
+            <div class="aeronave-card">
+                <div class="aeronave-img">
+                    <img src="image/as350.png" alt="Phoenix AS350">
                 </div>
-                <div class="saer2">
-                    <img src="image/pitoco.png" alt="sub-comando" class="sub-comando">
-                    <p>Sub-Comandante</p>
-                    <p>Pitoco</p>
+                <div class="aeronave-info">
+                    <h3>Phoenix</h3>
+                    <p>AS350 - Helicóptero principal para patrulhamento e operações táticas.</p>
+                    <a href="public/helicopteros.html" class="btn-card">Ver Detalhes</a>
                 </div>
+            </div>
+            
+            <div class="aeronave-card">
+                <div class="aeronave-img">
+                    <img src="image/uh1.png" alt="Pelicano UH1">
+                </div>
+                <div class="aeronave-info">
+                    <h3>Pelicano</h3>
+                    <p>UH1 - Equipado com guincho para operações de resgate e salvamento.</p>
+                    <a href="public/helicopteros.html" class="btn-card">Ver Detalhes</a>
+                </div>
+            </div>
+            
+            <div class="aeronave-card destaque">
+                <div class="aeronave-img">
+                    <img src="image/buzzard.png" alt="Raptor">
+                </div>
+                <div class="aeronave-info">
+                    <h3>Raptor</h3>
+                    <p>Helicóptero de ataque e suporte tático para operações especiais.</p>
+                    <a href="public/helicopteros.html" class="btn-card">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Comandantes -->
+    <section class="comandantes-sec">
+        <div class="secao-header">
+            <div class="secao-barra"></div>
+            <h2>Comando Atual</h2>
+        </div>
+        <div class="comandantes-grid">
+            <div class="comandante-card">
+                <div class="comandante-foto">
+                    <img src="image/scott.png" alt="Comandante Scott">
+                </div>
+                <div class="comandante-info">
+                    <span class="cargo-tag">Comandante</span>
+                    <h3>Scott</h3>
+                    <p>Comando SAER</p>
+                </div>
+            </div>
+            
+            <div class="comandante-card">
+                <div class="comandante-foto">
+                    <img src="image/pitoco.png" alt="Subcomandante Pitoco">
+                </div>
+                <div class="comandante-info">
+                    <span class="cargo-tag sub">Subcomandante</span>
+                    <h3>Pitoco</h3>
+                    <p>Subcomando SAER</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Links Rápidos -->
+    <section class="links-sec">
+        <div class="secao-header">
+            <div class="secao-barra"></div>
+            <h2>Acesso Rápido</h2>
+        </div>
+        <div class="links-grid">
+            <a href="public/tutoriais.html" class="link-card">
+                <div class="link-icone">🎥</div>
+                <h3>Tutoriais</h3>
+                <p>Percurso de voo e configurações</p>
+            </a>
+            
+            <a href="public/regras.html" class="link-card">
+                <div class="link-icone">📋</div>
+                <h3>Regras</h3>
+                <p>Normas e diretrizes do grupamento</p>
+            </a>
+            
+            <a href="public/galeria.html" class="link-card">
+                <div class="link-icone">📸</div>
+                <h3>Galeria</h3>
+                <p>Fotos das operações e equipe</p>
+            </a>
+            
+            <a href="public/memorial.html" class="link-card">
+                <div class="link-icone">🕊️</div>
+                <h3>Memorial</h3>
+                <p>Antigos comandantes do SAER</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de Estatísticas -->
+    <section class="stats-sec">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-numero">8</span>
+                <span class="stat-label">Gestões</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-numero">4</span>
+                <span class="stat-label">Aeronaves</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-numero">19</span>
+                <span class="stat-label">Regras</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-numero">5</span>
+                <span class="stat-label">Funções</span>
             </div>
         </div>
     </section>
     
     <footer class="rodape">
         <div class="rodape-conteudo">
-            <p>&copy; 2026 SAER - Revoada RJ.</p>
+            <div class="rodape-info">
+                <img src="image/SaerLogo.png" alt="SAER Logo" class="rodape-logo">
+                <p>Serviço Aeropolicial - PCERJ</p>
+            </div>
+            <p>&copy; 2026 SAER - Revoada RJ. Todos os direitos reservados.</p>
             <div class="redes">
-                <a href="#">Instagram</a>
-                <a href="#">Discord</a>
-                <a href="#">GitHub</a>
+                <a href="#" title="Instagram">📷 Instagram</a>
+                <a href="#" title="Discord">💬 Discord</a>
+                <a href="#" title="GitHub">🐙 GitHub</a>
             </div>
         </div>
     </footer>

@@ -5,22 +5,23 @@
 }
 
 body {
-    width: 100dvw;
-    min-height: 100dvh;
+    width: 100%;
+    min-height: 100vh;
     color: white;
     background-color: #000000;
     overflow-x: hidden;
-    overflow-y: auto;
-    background-image: url('/saer main/image/bgSAER2.png');
+    background-image: url('../image/bgSAER2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    gap: 100px;
 }
 
+/* ==================== */
+/* HEADER */
+/* ==================== */
 .header {
     background-color: #000000;
     padding: 25px 50px;
@@ -59,91 +60,389 @@ body {
     text-decoration: none;
     font-size: 20px;
     transition: color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    padding-bottom: 5px;
 }
 
-.nav-menu a:hover {
+/* Barrinha embaixo do link ativo */
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c7ac71;
+    transition: width 0.3s ease;
+}
+
+/* Quando passar o mouse */
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* Quando estiver ativo (selecionado) */
+.nav-menu a.ativo::after,
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* Cor do link ativo */
+.nav-menu a.ativo {
     color: #c7ac71;
 }
-
-main {
+/* ==================== */
+/* MAIN TITLE */
+/* ==================== */
+.main {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 20px;
+}
+
+.main-content {
     text-align: center;
 }
 
-main .main-content h1 {
+.main-content h1 {
     font-family: 'Anton', sans-serif;
     color: #c7ac71;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: 40px;
-    margin-bottom: 30px;
+    font-size: 50px;
+    margin-bottom: 5px;
 }
 
-.heli-sec {
-    width: 80%;
+.main-content p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #999999;
+    font-size: 16px;
+}
+
+/* ==================== */
+/* GRID DE HELICÓPTEROS */
+/* ==================== */
+.helicopteros-sec {
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 40px;
     padding: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
 }
 
-.as350,
-.uh1,
-.huey,
-.buzzard {
-    border: 2px solid #c7ac71;
+/* Card do Helicóptero */
+.heli-card {
+    border: 2px solid rgba(199, 172, 113, 0.3);
     border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(41, 41, 41, 0.5);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.heli-card:hover {
+    transform: translateY(-8px);
+}
+
+.heli-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Cores específicas por helicóptero */
+.heli-card.phoenix {
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+.heli-card.phoenix:hover {
+    border-color: #ffd700;
+    box-shadow: 0px 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.heli-card.pelicano-guincho {
+    border-color: rgba(255, 136, 0, 0.4);
+}
+
+.heli-card.pelicano-guincho:hover {
+    border-color: #ff8800;
+    box-shadow: 0px 10px 30px rgba(255, 136, 0, 0.3);
+}
+
+.heli-card.pelicano-sem {
+    border-color: rgba(68, 136, 255, 0.4);
+}
+
+.heli-card.pelicano-sem:hover {
+    border-color: #4488ff;
+    box-shadow: 0px 10px 30px rgba(68, 136, 255, 0.3);
+}
+
+.heli-card.raptor {
+    border-color: rgba(255, 68, 68, 0.4);
+}
+
+.heli-card.raptor:hover {
+    border-color: #ff4444;
+    box-shadow: 0px 10px 30px rgba(255, 68, 68, 0.3);
+}
+
+/* Imagem */
+.heli-imagem {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(199, 172, 113, 0.2);
+}
+
+.heli-imagem img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+.heli-card:hover .heli-imagem img {
+    transform: scale(1.1);
+}
+
+/* Tags */
+.heli-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.heli-tag {
+    background-color: #ffd700;
+}
+
+.heli-tag.resgate {
+    background-color: #ff8800;
+    color: white;
+}
+
+.heli-tag.transporte {
+    background-color: #4488ff;
+    color: white;
+}
+
+.heli-tag.ataque {
+    background-color: #ff4444;
+    color: white;
+}
+
+/* Informações */
+.heli-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.heli-nome {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.heli-nome h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.modelo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c7ac71;
+    font-size: 14px;
+    background-color: rgba(199, 172, 113, 0.15);
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.heli-descricao p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Especificações */
+.heli-especificacoes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.espec-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 3px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(199, 172, 113, 0.2);
+    flex: 1;
+    min-width: 80px;
+}
+
+.espec-icone {
+    font-size: 20px;
+}
+
+.espec-label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #999999;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.espec-valor {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Uso */
+.heli-uso {
+    margin-top: auto;
+}
+
+.heli-uso h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #999999;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.uso-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.uso-tag {
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-family: 'Anton', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #c7ac71;
+    background-color: rgba(199, 172, 113, 0.1);
+    border: 1px solid rgba(199, 172, 113, 0.3);
+}
+
+.uso-tag.exclusivo {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-color: #ffd700;
+    color: #ffd700;
+}
+
+/* ==================== */
+/* LEGENDA */
+/* ==================== */
+.legenda-sec {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    padding: 20px;
+}
+
+.legenda-container {
+    border: 2px solid rgba(199, 172, 113, 0.3);
+    border-radius: 15px;
     backdrop-filter: blur(5px);
     background-color: rgba(41, 41, 41, 0.5);
-    transition: 0.5s;
-    padding: 20px;
-    min-height: 300px;
+    padding: 25px;
 }
 
-.as350 img,
-.uh1 img,
-.huey img,
-.buzzard img {
-    width: 70%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.as350 p,
-.uh1 p,
-.huey p,
-.buzzard p {
+.legenda-container h3 {
     font-family: 'Anton', sans-serif;
-    letter-spacing: 1px;
-    font-size: 30px;
-    text-transform: uppercase;
     color: #c7ac71;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
-.as350:hover,
-.uh1:hover,
-.huey:hover,
-.buzzard:hover {
-    transform: scale(1.05);
-    transition: 0.5s;
-    box-shadow: 0px 0px 10px 4px #c7ac71;
+.legenda-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 13px;
+}
+
+.legenda-cor {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.legenda-cor.principal {
+    background-color: #ffd700;
+}
+
+.legenda-cor.resgate {
+    background-color: #ff8800;
+}
+
+.legenda-cor.transporte {
+    background-color: #4488ff;
+}
+
+.legenda-cor.ataque {
+    background-color: #ff4444;
+}
+
+.legenda-cor.exclusivo {
+    background: linear-gradient(135deg, #c7ac71, #ffd700);
+}
+
+/* ==================== */
+/* RODAPÉ */
+/* ==================== */
 .rodape {
     background-color: transparent;
     color: white;
     padding: 20px 0;
     margin-top: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 1px solid rgba(199, 172, 113, 0.2);
 }
 
 .rodape-conteudo {
@@ -169,4 +468,73 @@ main .main-content h1 {
 
 .redes a:hover {
     color: #c7ac71;
+}
+
+/* ==================== */
+/* RESPONSIVIDADE */
+/* ==================== */
+@media (max-width: 900px) {
+    .helicopteros-sec {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        position: relative;
+        left: auto;
+        margin-bottom: 10px;
+    }
+    
+    .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-menu a {
+        font-size: 14px;
+    }
+    
+    .main-content h1 {
+        font-size: 36px;
+    }
+    
+    .helicopteros-sec {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    
+    .heli-nome h2 {
+        font-size: 26px;
+    }
+    
+    .legenda-sec {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .helicopteros-sec {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .heli-imagem {
+        height: 180px;
+        padding: 20px;
+    }
+    
+    .heli-info {
+        padding: 20px;
+    }
+    
+    .espec-item {
+        min-width: 60px;
+    }
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link rel="icon" type="image/x-icon" href="../image/SaerLogo.png">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header class="header">
         <a href="../index.html" class="logo">
@@ -19,7 +17,7 @@
         <nav>
             <ul class="nav-menu">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="helicopteros.html">Helicópteros</a></li>
+                <li><a href="helicopteros.html" class="ativo">Helicópteros</a></li>
                 <li><a href="galeria.html">Fotos</a></li>
                 <li><a href="funcoes.html">Funções</a></li>
                 <li><a href="tutoriais.html">Tutoriais</a></li>
@@ -28,32 +26,217 @@
             </ul>
         </nav>
     </header>
-
-    <main>
+    
+    <main class="main">
         <div class="main-content">
-            <h1>helicópteros</h1>
+            <h1>Helicópteros</h1>
+            <p>Frota de Aeronaves do Serviço Aeropolicial</p>
         </div>
     </main>
+    
+    <section class="helicopteros-sec">
+        <!-- Card Phoenix -->
+        <div class="heli-card phoenix">
+            <div class="heli-card-inner">
+                <div class="heli-imagem">
+                    <img src="../image/as350.png" alt="AS350 Phoenix">
+                    <div class="heli-tag">Principal</div>
+                </div>
+                <div class="heli-info">
+                    <div class="heli-nome">
+                        <h2>Phoenix</h2>
+                        <span class="modelo">AS350</span>
+                    </div>
+                    <div class="heli-descricao">
+                        <p>Helicóptero principal da frota SAER, utilizado em missões de patrulhamento, reconhecimento aéreo e apoio a operações terrestres. Leve, ágil e versátil.</p>
+                    </div>
+                    <div class="heli-especificacoes">
+                        <div class="espec-item">
+                            <span class="espec-icone">⚡</span>
+                            <span class="espec-label">Velocidade</span>
+                            <span class="espec-valor">Alta</span>
+                        </div>
+                        <div class="espec-item">
+                            <span class="espec-icone">👥</span>
+                            <span class="espec-label">Tripulação</span>
+                            <span class="espec-valor">2-4</span>
+                        </div>
+                        <div class="espec-item">
+                            <span class="espec-icone">🎯</span>
+                            <span class="espec-label">Função</span>
+                            <span class="espec-valor">Patrulha</span>
+                        </div>
+                    </div>
+                    <div class="heli-uso">
+                        <h4>Usado por:</h4>
+                        <div class="uso-tags">
+                            <span class="uso-tag">Piloto SAER</span>
+                            <span class="uso-tag">Atirador SAER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <section class="heli-sec">
-        <div class="as350">
-            <img src="../image/as350.png" alt="as350 helicopter">
-            <p>Phoenix</p>
+        <!-- Card Pelicano com Guincho -->
+        <div class="heli-card pelicano-guincho">
+            <div class="heli-card-inner">
+                <div class="heli-imagem">
+                    <img src="../image/uh1.png" alt="UH1 Pelicano com Guincho">
+                    <div class="heli-tag resgate">Resgate</div>
+                </div>
+                <div class="heli-info">
+                    <div class="heli-nome">
+                        <h2>Pelicano</h2>
+                        <span class="modelo">UH1 (com guincho)</span>
+                    </div>
+                    <div class="heli-descricao">
+                        <p>Versão equipada com guincho para operações de resgate e salvamento. Ideal para operações que exigem içamento de equipes ou resgate de vítimas.</p>
+                    </div>
+                    <div class="heli-especificacoes">
+                        <div class="espec-item">
+                            <span class="espec-icone">⚡</span>
+                            <span class="espec-label">Velocidade</span>
+                            <span class="espec-valor">Alta</span>
+                        </div>
+                        <div class="espec-item">
+                            <span class="espec-icone">👥</span>
+                            <span class="espec-label">Tripulação</span>
+                            <span class="espec-valor">3-6</span>
+                        </div>
+                        <div class="espec-item">
+                            <span class="espec-icone">🪢</span>
+                            <span class="espec-label">Função</span>
+                            <span class="espec-valor">Resgate</span>
+                        </div>
+                    </div>
+                    <div class="heli-uso">
+                        <h4>Usado por:</h4>
+                        <div class="uso-tags">
+                            <span class="uso-tag exclusivo">Elite SAER</span>
+                            <span class="uso-tag exclusivo">CORE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="uh1">
-            <img src="../image/uh1.png" alt="uh1 helicopter">
-            <p>Pelicano (com guincho)</p>
+
+        <!-- Card Pelicano sem Guincho -->
+        <div class="heli-card pelicano-sem">
+            <div class="heli-card-inner">
+                <div class="heli-imagem">
+                    <img src="../image/huey.png" alt="UH1 Pelicano">
+                    <div class="heli-tag transporte">Transporte</div>
+                </div>
+                <div class="heli-info">
+                    <div class="heli-nome">
+                        <h2>Pelicano</h2>
+                        <span class="modelo">UH1</span>
+                    </div>
+                    <div class="heli-descricao">
+                        <p>Versão padrão do Pelicano para transporte de equipes e apoio geral em operações. Robusto e confiável para missões diversas.</p>
+                    </div>
+                    <div class="heli-especificacoes">
+                        <div class="espec-item">
+                            <span class="espec-icone">⚡</span>
+                            <span class="espec-label">Velocidade</span>
+                            <span class="espec-valor">Média</span>
+                        </div>
+                        <div class="espec-item">
+                            <span class="espec-icone">👥</span>
+                            <span class="espec-label">Tripulação</span>
+                            <span class="espec-valor">3-5</span>
+                        </div>
+                        <div class="espec-item">
+                            <span class="espec-icone">📦</span>
+                            <span class="espec-label">Função</span>
+                            <span class="espec-valor">Apoio</span>
+                        </div>
+                    </div>
+                    <div class="heli-uso">
+                        <h4>Usado por:</h4>
+                        <div class="uso-tags">
+                            <span class="uso-tag exclusivo">Elite SAER</span>
+                            <span class="uso-tag exclusivo">CORE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="huey">
-            <img src="../image/huey.png" alt="huey helicopter">
-            <p>Pelicano</p>
-        </div>
-        <div class="buzzard">
-            <img src="../image/buzzard.png" alt="buzzard helicopter">
-            <p>Raptor</p>
+
+        <!-- Card Raptor -->
+        <div class="heli-card raptor">
+            <div class="heli-card-inner">
+                <div class="heli-imagem">
+                    <img src="../image/buzzard.png" alt="Buzzard Raptor">
+                    <div class="heli-tag ataque">Ataque</div>
+                </div>
+                <div class="heli-info">
+                    <div class="heli-nome">
+                        <h2>Raptor</h2>
+                        <span class="modelo">Buzzard</span>
+                    </div>
+                    <div class="heli-descricao">
+                        <p>Helicóptero de ataque e suporte tático para operações especiais. Equipado com armamento para engajamento de alvos e cobertura aérea.</p>
+                    </div>
+                    <div class="heli-especificacoes">
+                        <div class="espec-item">
+                            <span class="espec-icone">⚡</span>
+                            <span class="espec-label">Velocidade</span>
+                            <span class="espec-valor">Muito Alta</span>
+                        </div>
+                        <div class="espec-item">
+                            <span class="espec-icone">👥</span>
+                            <span class="espec-label">Tripulação</span>
+                            <span class="espec-valor">2</span>
+                        </div>
+                        <div class="espec-item">
+                            <span class="espec-icone">💥</span>
+                            <span class="espec-label">Função</span>
+                            <span class="espec-valor">Combate</span>
+                        </div>
+                    </div>
+                    <div class="heli-uso">
+                        <h4>Usado por:</h4>
+                        <div class="uso-tags">
+                            <span class="uso-tag exclusivo">Elite SAER</span>
+                            <span class="uso-tag exclusivo">CORE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Legenda -->
+    <section class="legenda-sec">
+        <div class="legenda-container">
+            <h3>Legenda de Funções</h3>
+            <div class="legenda-grid">
+                <div class="legenda-item">
+                    <span class="legenda-cor principal"></span>
+                    <span>Patrulha/Reconhecimento</span>
+                </div>
+                <div class="legenda-item">
+                    <span class="legenda-cor resgate"></span>
+                    <span>Resgate/Salvamento</span>
+                </div>
+                <div class="legenda-item">
+                    <span class="legenda-cor transporte"></span>
+                    <span>Transporte/Apoio</span>
+                </div>
+                <div class="legenda-item">
+                    <span class="legenda-cor ataque"></span>
+                    <span>Ataque/Combate</span>
+                </div>
+                <div class="legenda-item">
+                    <span class="legenda-cor exclusivo"></span>
+                    <span>Elite / CORE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer class="rodape">
         <div class="rodape-conteudo">
             <p>&copy; 2026 SAER - Revoada RJ.</p>
@@ -65,5 +248,4 @@
         </div>
     </footer>
 </body>
-
 </html>
