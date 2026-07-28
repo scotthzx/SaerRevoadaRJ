@@ -1,0 +1,559 @@
+/* ==================== */
+/* CURSO HERO */
+/* ==================== */
+.curso-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(199,172,113,0.1));
+    padding: 80px 50px;
+    text-align: center;
+    border-bottom: 1px solid rgba(199,172,113,0.3);
+}
+
+.curso-hero-content h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    color: #c7ac71;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.curso-slogan {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.curso-info-basica {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    color: #c7ac71;
+    padding: 15px 30px;
+    border: 2px solid rgba(199,172,113,0.3);
+    border-radius: 10px;
+    background-color: rgba(41,41,41,0.3);
+}
+
+.info-icon {
+    font-size: 24px;
+}
+
+/* ==================== */
+/* SEÇÕES GERAIS DO CURSO */
+/* ==================== */
+.curso-secao {
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==================== */
+/* OBJETIVO */
+/* ==================== */
+.objetivo-content {
+    text-align: center;
+}
+
+.objetivo-content > p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.objetivo-pilares {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pilar {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 30px;
+    border: 2px solid rgba(199,172,113,0.3);
+    border-radius: 15px;
+    background-color: rgba(41,41,41,0.3);
+    transition: all 0.3s;
+}
+
+.pilar:hover {
+    border-color: #c7ac71;
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px rgba(199,172,113,0.2);
+}
+
+.pilar-icone {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.pilar h3 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.pilar p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+/* ==================== */
+/* SAER INFO */
+/* ==================== */
+.saer-info {
+    background-color: rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(199,172,113,0.2);
+    border-bottom: 1px solid rgba(199,172,113,0.2);
+    max-width: 100%;
+}
+
+.saer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.saer-content > p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.saer-destaques {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.destaque-item {
+    padding: 20px 30px;
+    border: 2px solid #c7ac71;
+    border-radius: 10px;
+    background-color: rgba(199,172,113,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.destaque-item strong {
+    color: #c7ac71;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ==================== */
+/* HIERARQUIA */
+/* ==================== */
+.hierarquia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.hierarquia-card {
+    padding: 30px;
+    border: 2px solid rgba(199,172,113,0.3);
+    border-radius: 15px;
+    background-color: rgba(41,41,41,0.3);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.hierarquia-card:hover {
+    border-color: #c7ac71;
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(199,172,113,0.2);
+}
+
+.hierarquia-card.comando {
+    border-color: #c7ac71;
+    background: linear-gradient(135deg, rgba(41,41,41,0.5), rgba(199,172,113,0.1));
+}
+
+.hierarquia-nivel {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: rgba(199,172,113,0.2);
+    color: #c7ac71;
+    border: 1px solid #c7ac71;
+    border-radius: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.hierarquia-card h3 {
+    font-family: 'Anton', sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hierarquia-card p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+/* ==================== */
+/* MISSÕES */
+/* ==================== */
+.missoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.missao-card {
+    padding: 30px 20px;
+    border: 2px solid rgba(199,172,113,0.3);
+    border-radius: 15px;
+    background-color: rgba(41,41,41,0.3);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.missao-card:hover {
+    border-color: #c7ac71;
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(199,172,113,0.2);
+}
+
+.missao-icone {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.missao-card h3 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.missao-card p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+/* ==================== */
+/* AVALIAÇÃO */
+/* ==================== */
+.avaliacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.avaliacao-item {
+    padding: 30px;
+    border: 2px solid rgba(199,172,113,0.3);
+    border-radius: 15px;
+    background-color: rgba(41,41,41,0.3);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.avaliacao-item:hover {
+    border-color: #c7ac71;
+    transform: translateY(-5px);
+}
+
+.avaliacao-item h3 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(199,172,113,0.3);
+}
+
+.avaliacao-descricao p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* ==================== */
+/* ETAPAS */
+/* ==================== */
+.etapas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.etapa-card {
+    border: 2px solid rgba(199,172,113,0.3);
+    border-radius: 20px;
+    background-color: rgba(41,41,41,0.3);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.etapa-card:hover {
+    border-color: #c7ac71;
+    box-shadow: 0px 0px 30px rgba(199,172,113,0.2);
+}
+
+.etapa-header {
+    background: linear-gradient(135deg, rgba(199,172,113,0.1), rgba(41,41,41,0.5));
+    padding: 30px;
+    border-bottom: 1px solid rgba(199,172,113,0.3);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.etapa-numero {
+    font-family: 'Anton', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-color: #c7ac71;
+    padding: 8px 20px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+}
+
+.etapa-header h3 {
+    font-family: 'Anton', sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+    flex: 1;
+}
+
+.etapa-duracao {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 16px;
+}
+
+.etapa-content {
+    padding: 40px;
+}
+
+.etapa-descricao h4 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.etapa-descricao ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.etapa-descricao ul li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.etapa-descricao ul li::before {
+    content: '•';
+    position: absolute;
+    left: 10px;
+    color: #c7ac71;
+    font-size: 20px;
+}
+
+/* ==================== */
+/* VÍDEOS */
+/* ==================== */
+.etapa-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.video-container h5 {
+    font-family: 'Anton', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.video-box {
+    border: 2px solid rgba(199,172,113,0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-placeholder {
+    text-align: center;
+    padding: 30px;
+}
+
+.play-icon {
+    font-size: 50px;
+    color: #c7ac71;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.video-placeholder p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.video-desc {
+    color: #999999 !important;
+    font-size: 14px !important;
+}
+
+/* ==================== */
+/* MENSAGEM DO ATIRADOR */
+/* ==================== */
+.etapa-mensagem {
+    margin-top: 30px;
+}
+
+.mensagem-box {
+    border: 2px solid #c7ac71;
+    border-radius: 15px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(199,172,113,0.1), rgba(41,41,41,0.3));
+}
+
+.mensagem-box h5 {
+    font-family: 'Anton', sans-serif;
+    color: #c7ac71;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.mensagem-box p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.mensagem-destaque {
+    color: #c7ac71 !important;
+    font-style: italic;
+    font-size: 18px !important;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(199,172,113,0.3);
+}
+
+/* ==================== */
+/* RESPONSIVIDADE */
+/* ==================== */
+@media (max-width: 1024px) {
+    .curso-hero-content h1 {
+        font-size: 40px;
+    }
+    
+    .curso-slogan {
+        font-size: 18px;
+    }
+    
+    .etapa-header h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .curso-hero {
+        padding: 50px 20px;
+    }
+    
+    .curso-hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .curso-info-basica {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .curso-secao {
+        padding: 50px 20px;
+    }
+    
+    .hierarquia-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .etapa-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .etapa-content {
+        padding: 20px;
+    }
+    
+    .etapa-videos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .curso-hero-content h1 {
+        font-size: 24px;
+    }
+    
+    .curso-slogan {
+        font-size: 16px;
+    }
+    
+    .etapa-header h3 {
+        font-size: 20px;
+    }
+    
+    .etapa-descricao ul li {
+        font-size: 14px;
+    }
+}
